@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import { WORDS } from './data/wordsLib';
+import { WORDS } from './assets/wordsLib';
 import { getRandom } from "./components/functions/functions";
+import { Field } from "./components/field/Field";
 
 function App() {
 
@@ -13,10 +14,9 @@ function App() {
     console.log(searchWord);
 
     return (
-        <div className="App">
-            <h1 className="text-3xl font-bold">Let's play "Wordle"</h1>
-            <div className={'container bg-gray-200'}>
-            </div>
+        <div className="App bg-gray-200 h-screen flex justify-center items-center w-full flex-col">
+            <h1 className="text-4xl font-bold text-cyan-700">Let's play "Wordle"</h1>
+            <Field/>
 
         </div>
     );

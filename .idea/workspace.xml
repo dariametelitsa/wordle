@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="first styles were added">
-      <change afterPath="$PROJECT_DIR$/src/components/functions/functions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/wordsLib.ts" afterDir="false" />
+    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added words and 1 word generate">
+      <change afterPath="$PROJECT_DIR$/src/components/button/Button.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/button/Button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/field/Field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/field/Field.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/letter/Letter.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letter/Letter.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/letter/Letter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letter/Letter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/word/Word.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/word/Word.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/wordsLib.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/wordsLib.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -119,7 +124,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714210205284</updated>
-      <workItem from="1714210206435" duration="11916000" />
+      <workItem from="1714210206435" duration="14477000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <option name="closed" value="true" />
@@ -137,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714225878436</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added words and 1 word generate">
+      <option name="closed" value="true" />
+      <created>1714226738042</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714226738042</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +159,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test commit" />
     <MESSAGE value="first styles were added" />
-    <option name="LAST_COMMIT_MESSAGE" value="first styles were added" />
+    <MESSAGE value="added words and 1 word generate" />
+    <option name="LAST_COMMIT_MESSAGE" value="added words and 1 word generate" />
   </component>
 </project>

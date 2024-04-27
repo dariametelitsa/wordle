@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Letter, LetterState } from "./Letter";
+import { Letter } from "./Letter";
 
 
 const meta = {
@@ -39,5 +39,12 @@ export const OutOfPlace: Story = {
     args: {
         letter: 'N',
         state: 'outOfPlace'
+    },
+};
+
+export const Active: Story = {
+    args: {
+        letter: 'N',
+        state: 'active'
     },
 };

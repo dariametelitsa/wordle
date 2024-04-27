@@ -68,7 +68,6 @@ export const Attempt: Story = {
     },
 };
 
-
 export const RightWord: Story = {
     args: {
         word: [
@@ -91,6 +90,33 @@ export const RightWord: Story = {
             {
                 letter: 'D',
                 state: 'onPlace'
+            },
+        ]
+    },
+};
+
+export const TryingEnterTheWord: Story = {
+    args: {
+        word: [
+            {
+                letter: 'W',
+                state: "active"
+            },
+            {
+                letter: 'O',
+                state: "active"
+            },
+            {
+                letter: 'R',
+                state: "active"
+            },
+            {
+                letter: 'L',
+                state: 'active'
+            },
+            {
+                letter: 'D',
+                state: 'active'
             },
         ]
     },
