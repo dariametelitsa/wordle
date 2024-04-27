@@ -2,9 +2,9 @@ import * as React from 'react';
 import { FaInfo } from "react-icons/fa";
 
 type TipProps = {
-
+    text: string
 };
-export const Tip = ({text}: {text: string}) => {
+export const Tip = ({text}: TipProps) => {
     return (
         <div className={'tip'}>
             <FaInfo size={'14'}/>

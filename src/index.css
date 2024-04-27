@@ -11,7 +11,7 @@
     /*}*/
 
     .tip {
-        @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md bg-gray-700 shadow-md text-white text-xs font-bold transition-all duration-100 origin-left flex gap-1;
+        @apply absolute w-auto p-2 rounded-md bg-gray-700 shadow-md text-white text-xs font-bold transition-all duration-100 origin-left flex gap-1 max-w-custom right-0 translate-x-[calc(100%+12px)];
     }
 }
 

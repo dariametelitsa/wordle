@@ -31,7 +31,7 @@ export const Field = (props: Props) => {
         //     <SideVarIcon text={'tooltip'} icon={<FaBeer size={'28'}/>}/>
         // </div>
         <div className="flex justify-center items-center w-full flex-col gap-2 mt-8">
-            <Word word={currentState}></Word> <Tip text={'Wrong'}/>
+            <Word word={currentState} tip={'Info'}></Word>
             <Word word={currentState2}></Word>
             <Word word={currentState}></Word>
             <Word word={currentState}></Word>
