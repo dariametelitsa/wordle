@@ -1,19 +1,21 @@
 import React from 'react';
 import './App.css';
-import { Field } from "./components/field/Field";
-import { Letter } from "./components/letter/Letter";
+import { WORDS } from './data/wordsLib';
+import { getRandom } from "./components/functions/functions";
 
 function App() {
+
+    const NUMBER_OF_GUESSES = 6;
+    let guessesRemaining = NUMBER_OF_GUESSES;
+    let currentGuess = [];
+    let nextLetter = [];
+    let searchWord = WORDS[getRandom(0, WORDS.length - 1)];
+    console.log(searchWord);
+
     return (
         <div className="App">
-            <h1 className="text-3xl font-bold underline">Wordle</h1>
-            <p className={'text-center text-green-500'}>Some text</p>
-            <p>Additing after added storybook</p>
-            <div className={'container'}>
-                <Letter letter={'m'} state={'wrong'}/>
-                <Letter state={'empty'}/>
-                <Letter letter={'m'} state={'onPlace'}/>
-                <Letter letter={'m'} state={'outOfPlace'}/>
+            <h1 className="text-3xl font-bold">Let's play "Wordle"</h1>
+            <div className={'container bg-gray-200'}>
             </div>
 
         </div>
