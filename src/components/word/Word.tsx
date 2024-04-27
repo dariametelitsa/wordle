@@ -1,13 +1,23 @@
 // @flow 
 import * as React from 'react';
+import { Letter, LetterState } from "../letter/Letter";
 
-type Props = {
-    
+export type wordType = {
+    letter?: string;
+    state: LetterState;
+}
+
+type WordProps = {
+    word: wordType[];
 };
-export const Word = (props: Props) => {
+export const Word = ({word}: WordProps) => {
     return (
-        <div>
-
+        <div className={'flex justify-center items-center gap-2'}>
+            {
+                word.map(letter => {
+                    return <Letter state={letter.state} letter={letter.letter}></Letter>
+                })
+            }
         </div>
     );
 };
