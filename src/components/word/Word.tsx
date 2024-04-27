@@ -10,6 +10,7 @@ export type wordType = {
 type WordProps = {
     word: wordType[];
 };
+
 export const Word = ({word}: WordProps) => {
     return (
         <div className={'flex justify-center items-center gap-2'}>

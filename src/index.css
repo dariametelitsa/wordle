@@ -10,7 +10,19 @@
     /*    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto bg-gray-800 text-green-500 hover:bg-green-600 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer hover:text-white;*/
     /*}*/
 
-    /*.sidebar-tooltip {*/
-    /*    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md bg-gray-900 shadow-md text-white text-xs font-bold transition-all duration-100 scale-0 origin-left;*/
-    /*}*/
+    .tip {
+        @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md bg-gray-700 shadow-md text-white text-xs font-bold transition-all duration-100 origin-left flex gap-1;
+    }
+}
+
+.tip::before {
+    content: '';
+    position: absolute;
+    left: -11px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-right: 6px solid rgb(54, 57, 63);
 }

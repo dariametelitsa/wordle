@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added words and 1 word generate">
-      <change afterPath="$PROJECT_DIR$/src/components/button/Button.stories.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/button/Button.tsx" afterDir="false" />
+    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added button and styles">
+      <change afterPath="$PROJECT_DIR$/src/components/tips/Tip.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/field/Field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/field/Field.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/letter/Letter.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letter/Letter.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/letter/Letter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letter/Letter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/word/Word.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/word/Word.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/wordsLib.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/wordsLib.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/word/Word.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/word/Word.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +120,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714210205284</updated>
-      <workItem from="1714210206435" duration="14477000" />
+      <workItem from="1714210206435" duration="15894000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <option name="closed" value="true" />
@@ -150,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714226738042</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added button and styles">
+      <option name="closed" value="true" />
+      <created>1714229113591</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714229113591</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +164,7 @@
     <MESSAGE value="test commit" />
     <MESSAGE value="first styles were added" />
     <MESSAGE value="added words and 1 word generate" />
-    <option name="LAST_COMMIT_MESSAGE" value="added words and 1 word generate" />
+    <MESSAGE value="added button and styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="added button and styles" />
   </component>
 </project>

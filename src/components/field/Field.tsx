@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { Word, wordType } from "../word/Word";
 import { Button } from "../button/Button";
+import { Tip } from "../tips/Tip";
 // import { FaAmazonPay, FaBeer, FaPoo } from "react-icons/fa";
 // import { ReactNode } from "react";
 // import { BsFillLightningFill, BsPlus } from "react-icons/bs";
@@ -30,7 +31,7 @@ export const Field = (props: Props) => {
         //     <SideVarIcon text={'tooltip'} icon={<FaBeer size={'28'}/>}/>
         // </div>
         <div className="flex justify-center items-center w-full flex-col gap-2 mt-8">
-            <Word word={currentState}></Word>
+            <Word word={currentState}></Word> <Tip text={'Wrong'}/>
             <Word word={currentState2}></Word>
             <Word word={currentState}></Word>
             <Word word={currentState}></Word>
