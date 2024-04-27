@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added tip">
-      <change afterPath="$PROJECT_DIR$/src/components/tips/Tip.stories.tsx" afterDir="false" />
+    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added tip position">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/field/Field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/field/Field.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tips/Tip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tips/Tip.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/word/Word.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/word/Word.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/letter/Letter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letter/Letter.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +119,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714210205284</updated>
-      <workItem from="1714210206435" duration="17327000" />
+      <workItem from="1714210206435" duration="19350000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <option name="closed" value="true" />
@@ -163,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714230550416</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added tip position">
+      <option name="closed" value="true" />
+      <created>1714232041993</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714232041993</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +181,7 @@
     <MESSAGE value="added words and 1 word generate" />
     <MESSAGE value="added button and styles" />
     <MESSAGE value="added tip" />
-    <option name="LAST_COMMIT_MESSAGE" value="added tip" />
+    <MESSAGE value="added tip position" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tip position" />
   </component>
 </project>
