@@ -19,7 +19,19 @@ const useWordle = (solution: string) => {
 
     }
 
-    const handleKeyUp = () => {
+    const handleKeyUp = (e: KeyboardEvent) => {
+        if(e.key === 'Backspace') {
+            if (currentGuess.length > 0) {
+                setCurrentGuess(prevState => prevState.slice(0, -1));
+            }
+            return
+        }
+        if(/^[A-Za-z]$/.test(e.key)) {
+            if (currentGuess.length < 5) {
+                setCurrentGuess(prevState => prevState + e.key)
+            }
+        }
+
     }
 
     return {

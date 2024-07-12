@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added starting logic">
-      <change afterPath="$PROJECT_DIR$/src/api/wordsAPI.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/utils/setDictionaryStructure.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useWordle.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/Types.ts" afterDir="false" />
+    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added skeleton logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/functions/functions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/getRandom.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/letter/Letter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letter/Letter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/word/Word.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/word/Word.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/field/Field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/field/Field.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useWordle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useWordle.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +123,8 @@
       <workItem from="1714235913617" duration="1173000" />
       <workItem from="1714387544273" duration="72000" />
       <workItem from="1715521025549" duration="123000" />
-      <workItem from="1720690698401" duration="9971000" />
+      <workItem from="1720690698401" duration="10414000" />
+      <workItem from="1720786954891" duration="2475000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <option name="closed" value="true" />
@@ -186,7 +182,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714234177875</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added fetch data from json">
+      <option name="closed" value="true" />
+      <created>1720709525934</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720709525934</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added skeleton logic">
+      <option name="closed" value="true" />
+      <created>1720709543917</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1720709543917</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +212,8 @@
     <MESSAGE value="added tip" />
     <MESSAGE value="added tip position" />
     <MESSAGE value="added starting logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="added starting logic" />
+    <MESSAGE value="added fetch data from json" />
+    <MESSAGE value="added skeleton logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="added skeleton logic" />
   </component>
 </project>

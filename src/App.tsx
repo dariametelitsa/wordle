@@ -23,32 +23,35 @@ function App() {
                 const randomIndex = getRandom(0, res.length - 1);
                 setSolution(res[randomIndex].word);
             })
+            .catch(e => {
+                console.log(e.message)
+            })
     }, []);
 
-    useEffect(() => {
-        const onKeyDown = (event: KeyboardEvent) => {
-            let key = event.key;
-            let found = key.match(/[a-zA-Z]/gi);
-
-            console.log('Key pressed', event.key);
-            if (key === 'Backspace' && nextLetter.length !== 0) {
-                nextLetter.pop();
-                return;
-            }
-
-        };
-        document.addEventListener('keydown', onKeyDown);
-
-        return () => {
-            document.removeEventListener('keydown', onKeyDown);
-        };
-    }, []);
+    // useEffect(() => {
+    //     const onKeyDown = (event: KeyboardEvent) => {
+    //         let key = event.key;
+    //         let found = key.match(/[a-zA-Z]/gi);
+    //
+    //         console.log('Key pressed', event.key);
+    //         if (key === 'Backspace' && nextLetter.length !== 0) {
+    //             nextLetter.pop();
+    //             return;
+    //         }
+    //
+    //     };
+    //     document.addEventListener('keydown', onKeyDown);
+    //
+    //     return () => {
+    //         document.removeEventListener('keydown', onKeyDown);
+    //     };
+    // }, []);
 
     return (
         <div className="App bg-gray-200 h-screen flex justify-center items-center w-full flex-col">
             <h1 className="text-4xl font-bold text-cyan-700">Let's play "Wordle"</h1>
             {solution && <p>{solution}</p>}
-            <Field attempts={NUMBER_OF_GUESSES}/>
+            {solution && <Field solution={solution}/>}
         </div>
     );
 }
