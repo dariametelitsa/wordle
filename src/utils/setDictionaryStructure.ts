@@ -1,4 +1,4 @@
-import { DictionaryType } from "../../types/Types";
+import { DictionaryType } from "../types/Types";
 
 export const setDictionaryStructure = (arr: Array<{ word: string }>): DictionaryType => {
     let wordsMap: DictionaryType = {};

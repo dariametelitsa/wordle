@@ -1,4 +1,4 @@
-export type LetterStatus = 'rightPosition' | 'wrongLetter' | 'wrongPosition | idle'
+export type LetterStatus = 'rightPosition' | 'wrongLetter' | 'wrongPosition' | 'idle'
 
 export interface WordsAPI {
     getWord(): Promise<WordType>;

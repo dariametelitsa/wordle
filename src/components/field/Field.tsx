@@ -1,32 +1,26 @@
 // @flow
 import * as React from 'react';
-import { Word, wordType } from "../word/Word";
-import { Button } from "../button/Button";
+import { useEffect } from 'react';
 import useWordle from "../../hooks/useWordle";
-import { useEffect } from "react";
-// import { FaAmazonPay, FaBeer, FaPoo } from "react-icons/fa";
-// import { ReactNode } from "react";
-// import { BsFillLightningFill, BsPlus } from "react-icons/bs";
-// import { MdChangeCircle, MdSwipeDown } from 'react-icons/md'
+import { DictionaryType } from "../../types/Types";
+
 
 type FieldProps = {
     solution: string
+    dictionary: DictionaryType
 };
-const currentState: wordType[] = [
-    {state: 'empty'},
-    {state: 'empty'},
-    {state: 'empty'},
-    {state: 'empty'},
-    {state: 'empty'}
-]
 
-export const Field = ({solution}: FieldProps) => {
-    const {currentGuess, handleKeyUp} = useWordle(solution);
+export const Field = ({solution, dictionary}: FieldProps) => {
+    const {currentGuess, handleKeyUp, guesses, isCorrect, turn} = useWordle(solution, dictionary);
+
     useEffect(() => {
         window.addEventListener('keyup', handleKeyUp);
-
         return () => window.removeEventListener('keyup', handleKeyUp);
     }, [handleKeyUp]);
+
+    useEffect(() => {
+        console.log(guesses, turn, isCorrect)
+    }, [guesses, turn, isCorrect]);
 
 
     return (<div>Wordle - {currentGuess}</div>)

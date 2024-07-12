@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Field } from "./components/field/Field";
 import { wordsAPI } from "./api/wordsAPI";
-import { setDictionaryStructure } from "./components/utils/setDictionaryStructure";
+import { setDictionaryStructure } from "./utils/setDictionaryStructure";
 import { DictionaryType } from "./types/Types";
-import { getRandom } from "./components/utils/getRandom";
+import { getRandom } from "./utils/getRandom";
 
 function App() {
     const [solution, setSolution] = useState<string | null>(null);
@@ -27,6 +27,7 @@ function App() {
                 console.log(e.message)
             })
     }, []);
+
 
     // useEffect(() => {
     //     const onKeyDown = (event: KeyboardEvent) => {
@@ -51,7 +52,7 @@ function App() {
         <div className="App bg-gray-200 h-screen flex justify-center items-center w-full flex-col">
             <h1 className="text-4xl font-bold text-cyan-700">Let's play "Wordle"</h1>
             {solution && <p>{solution}</p>}
-            {solution && <Field solution={solution}/>}
+            {solution && dictionary && <Field solution={solution} dictionary={dictionary}/>}
         </div>
     );
 }
