@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added colored keyboard">
+    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added ending game logic">
+      <change afterPath="$PROJECT_DIR$/src/components/modal/Modal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/field/Field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/field/Field.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useWordle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useWordle.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +126,7 @@
       <workItem from="1720690698401" duration="10414000" />
       <workItem from="1720786954891" duration="9300000" />
       <workItem from="1721118541687" duration="19120000" />
-      <workItem from="1721149650412" duration="469000" />
+      <workItem from="1721149650412" duration="1277000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <option name="closed" value="true" />
@@ -232,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721149679964</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added ending game logic">
+      <option name="closed" value="true" />
+      <created>1721150165550</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1721150165550</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +260,7 @@
     <MESSAGE value="added addNewGuess and formatGuess body function" />
     <MESSAGE value="added logic and bounded it with UI" />
     <MESSAGE value="added colored keyboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="added colored keyboard" />
+    <MESSAGE value="added ending game logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ending game logic" />
   </component>
 </project>

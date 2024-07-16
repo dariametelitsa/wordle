@@ -8,6 +8,7 @@ import { Grid } from "../grid/Grid";
 import { InfoMessage } from "../infoMessage/InfoMessage";
 import { Keypad } from "../keypad/Keypad";
 import { NUMBER_OF_GUESSES } from "../../App";
+import { Modal } from "../modal/Modal";
 
 type FieldProps = {
     solution: string
@@ -17,15 +18,16 @@ type FieldProps = {
 export const Field = ({solution, dictionary}: FieldProps) => {
     const [message, setMessage] = useState<null | string>(null);
     const {currentGuess, handleKeyUp, guesses, isCorrect, turn, handleOnClick, usedKeys} = useWordle({solution, dictionary, setMessage});
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         window.addEventListener('keyup', handleKeyUp);
         if(isCorrect) {
-            console.log('congr')
+            setTimeout(()=> setShowModal(true), 2000);
             window.removeEventListener('keyup', handleKeyUp);
         }
         if(turn >= NUMBER_OF_GUESSES) {
-            console.log('fail')
+            setTimeout(()=> setShowModal(true), 2000);
             window.removeEventListener('keyup', handleKeyUp);
         }
         return () => window.removeEventListener('keyup', handleKeyUp);
@@ -39,6 +41,7 @@ export const Field = ({solution, dictionary}: FieldProps) => {
                 <Grid currentGuess={currentGuess} guesses={guesses} turn={turn}/>
                 <Button callBack={handleOnClick}>Enter the word</Button>
                 <Keypad usedKeys={usedKeys}/>
+                {showModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution}/>}
             </div>
         </div>
     )
