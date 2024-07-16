@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Letter } from "./Letter";
 
-
 const meta = {
     title: 'Example/Letter',
     component: Letter,
@@ -17,28 +16,28 @@ type Story = StoryObj<typeof meta>;
 export const Empty: Story = {
     args: {
         letter: 'N',
-        state: 'empty'
+        state: 'idle'
     },
 };
 
 export const Wrong: Story = {
     args: {
         letter: 'N',
-        state: 'wrong'
+        state: 'wrongLetter'
     },
 };
 
 export const OnPlace: Story = {
     args: {
         letter: 'N',
-        state: 'onPlace'
+        state: 'rightPosition'
     },
 };
 
 export const OutOfPlace: Story = {
     args: {
         letter: 'N',
-        state: 'outOfPlace'
+        state: 'wrongPosition'
     },
 };
 

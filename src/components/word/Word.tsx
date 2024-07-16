@@ -1,54 +1,54 @@
-// @flow 
+// @flow
 import * as React from 'react';
-import { Letter, LetterProps, LetterState } from "../letter/Letter";
+import { Letter } from "../letter/Letter";
 import { Tip } from "../tips/Tip";
-import { useEffect, useState } from "react";
-
-export type wordType = {
-    letter?: string;
-    state: LetterState;
-}
+import { LetterType } from "../../types/Types";
+import { WORD_LENGTH } from "../../App";
 
 type WordProps = {
-    word: wordType[];
     tip?: string;
+    guess: Array<LetterType> | string
 };
 
-export const Word = ({word, tip}: WordProps) => {
-    const [newWord, setNewWord] = useState<LetterProps[]>(word);
+export const Word = ({guess, tip}: WordProps) => {
+    if (guess) {
 
-    useEffect(() => {
-        const onKeyDown = (event:KeyboardEvent) => {
-            let key = event.key;
-            let found = key.match(/[a-zA-Z]/gi);
+        if (typeof guess === 'string') {
+            const currentGuess = guess.split('');
+            const emptyLetters = Array.from({length: WORD_LENGTH - currentGuess.length}, (_, ind) => (<Letter key={WORD_LENGTH + ind} letter={null} state={'active'}/>))
 
-            //console.log('Key pressed', event.key);
-            if(key === 'Backspace' && newWord.length !== 0) {
-                setNewWord(newWord.slice(0, newWord.length - 2));
-                return;
-            }
-            if(found) {
-                let attempt: LetterProps = {letter: key.toUpperCase(), state: 'active'};
-                setNewWord([...newWord, attempt]);
-            }
+            return (
+                <div className={'flex justify-center items-center gap-2 relative m-2'}>
+                    {currentGuess.map((l, ind) => {
+                        return <Letter key={ind} letter={l} state={'active'}/>
+                    })}
+                    {emptyLetters}
+                </div>
+            )
+        }
 
-        };
-        document.addEventListener('keydown', onKeyDown);
-
-        return () => {
-            document.removeEventListener('keydown', onKeyDown);
-        };
-    }, []);
-
-    //console.log(newWord)
+        return (
+            <div className={'flex justify-center items-center gap-2 relative m-2'}>
+                {
+                    guess.map((l, ind) => {
+                        return (<Letter key={ind}
+                                        letter={l.letter}
+                                        state={l.status}
+                        ></Letter>)
+                    })
+                }
+                {tip && <Tip text={tip}/>}
+            </div>
+        )
+    }
 
     return (
-        <div className={'flex justify-center items-center gap-2 relative'}>
-            {
-                newWord.map(letter => {
-                    return <Letter state={letter.state} letter={letter.letter}></Letter>
-                })
-            }
+        <div className={'flex justify-center items-center gap-2 relative m-2'}>
+            <Letter state={'idle'}></Letter>
+            <Letter state={'idle'}></Letter>
+            <Letter state={'idle'}></Letter>
+            <Letter state={'idle'}></Letter>
+            <Letter state={'idle'}></Letter>
             {tip && <Tip text={tip}/>}
         </div>
     );

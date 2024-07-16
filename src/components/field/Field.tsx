@@ -1,9 +1,11 @@
 // @flow
 import * as React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import useWordle from "../../hooks/useWordle";
 import { DictionaryType } from "../../types/Types";
-
+import { Button } from "../button/Button";
+import { Grid } from "../grid/Grid";
+import { InfoMessage } from "../infoMessage/InfoMessage";
 
 type FieldProps = {
     solution: string
@@ -11,7 +13,10 @@ type FieldProps = {
 };
 
 export const Field = ({solution, dictionary}: FieldProps) => {
-    const {currentGuess, handleKeyUp, guesses, isCorrect, turn} = useWordle(solution, dictionary);
+    const [message, setMessage] = useState<null | string>(null);
+    const {currentGuess, handleKeyUp, guesses, isCorrect, turn, handleOnClick} = useWordle({solution, dictionary, setMessage});
+
+
 
     useEffect(() => {
         window.addEventListener('keyup', handleKeyUp);
@@ -22,31 +27,15 @@ export const Field = ({solution, dictionary}: FieldProps) => {
         console.log(guesses, turn, isCorrect)
     }, [guesses, turn, isCorrect]);
 
-
-    return (<div>Wordle - {currentGuess}</div>)
-
-    // const generateField = (columnCount: number) => {
-    //     let gameField = [];
-    //     for (let i = 0; i < columnCount; i++) {
-    //         gameField.push(<Word word={currentState}/>)
-    //     }
-    //     return gameField;
-    // }
-    //
-    // return (
-    //     <div className="flex justify-center items-center w-full flex-col gap-2 mt-8">
-    //         {/*{generateField(attempts)}*/}
-    //         <Button callBack={() => {
-    //         }}>Enter the word</Button>
-    //     </div>
-    // );
+    return (
+        <div>
+            {message && <InfoMessage message={message} setMessage={setMessage}/>}
+            <div>Wordle - {currentGuess}</div>
+            <div className="flex justify-center items-center w-full flex-col gap-2 mt-8">
+                <Grid currentGuess={currentGuess} guesses={guesses} turn={turn}/>
+                <Button callBack={handleOnClick}>Enter the word</Button>
+            </div>
+        </div>
+    )
 };
 
-
-// const SideVarIcon = ({icon, text='tooltip'}: {icon: ReactNode, text: string}) => (
-//     <div className={'sidebar-icon group'}>
-//         {icon}
-//
-//         <span className={'sidebar-tooltip group-hover:scale-100'}>{text}</span>
-//     </div>
-// );

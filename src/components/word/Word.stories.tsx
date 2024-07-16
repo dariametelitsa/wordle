@@ -16,26 +16,26 @@ type Story = StoryObj<typeof meta>;
 
 export const EveryLetterWrong: Story = {
     args: {
-        word: [
+        guess: [
             {
                 letter: 'N',
-                state: "wrong"
+                status: 'wrongLetter'
             },
             {
                 letter: 'M',
-                state: "wrong"
+                status: 'wrongLetter'
             },
             {
                 letter: 'M',
-                state: "wrong"
+                status: 'wrongLetter'
             },
             {
                 letter: 'O',
-                state: 'wrong'
+                status: 'wrongLetter'
             },
             {
                 letter: 'A',
-                state: 'wrong'
+                status: 'wrongLetter'
             },
         ]
     },
@@ -43,26 +43,26 @@ export const EveryLetterWrong: Story = {
 
 export const Attempt: Story = {
     args: {
-        word: [
+        guess: [
             {
                 letter: 'W',
-                state: "onPlace"
+                status: "rightPosition"
             },
             {
                 letter: 'M',
-                state: "wrong"
+                status: "wrongLetter"
             },
             {
                 letter: 'D',
-                state: "outOfPlace"
+                status: "wrongPosition"
             },
             {
                 letter: 'O',
-                state: 'outOfPlace'
+                status: 'wrongPosition'
             },
             {
                 letter: 'L',
-                state: 'outOfPlace'
+                status: 'wrongPosition'
             },
         ]
     },
@@ -70,26 +70,26 @@ export const Attempt: Story = {
 
 export const RightWord: Story = {
     args: {
-        word: [
+        guess: [
             {
                 letter: 'W',
-                state: "onPlace"
+                status: "rightPosition"
             },
             {
                 letter: 'O',
-                state: "onPlace"
+                status: "rightPosition"
             },
             {
                 letter: 'R',
-                state: "onPlace"
+                status: "rightPosition"
             },
             {
                 letter: 'L',
-                state: 'onPlace'
+                status: 'rightPosition'
             },
             {
                 letter: 'D',
-                state: 'onPlace'
+                status: 'rightPosition'
             },
         ]
     },
@@ -97,49 +97,54 @@ export const RightWord: Story = {
 
 export const TryingEnterTheWord: Story = {
     args: {
-        word: [
+        guess: [
             {
                 letter: 'W',
-                state: "active"
+                status: "active"
             },
             {
                 letter: 'O',
-                state: "active"
+                status: "active"
             },
             {
                 letter: 'R',
-                state: "active"
+                status: "active"
             },
             {
                 letter: 'L',
-                state: 'active'
+                status: 'active'
             },
             {
                 letter: 'D',
-                state: 'active'
+                status: 'active'
             },
         ]
     },
 };
 
-export const EmptyWord: Story = {
-    args: {
-        word: [
-            {
-                state: "empty"
-            },
-            {
-                state: "empty"
-            },
-            {
-                state: "empty"
-            },
-            {
-                state: 'empty'
-            },
-            {
-                state: 'empty'
-            },
-        ]
-    },
-};
+// export const EmptyWord: Story = {
+//     args: {
+//         guess: [
+//             {
+//                 letter: null,
+//                 status: 'idle'
+//             },
+//             {
+//                 letter: null,
+//                 status: "idle"
+//             },
+//             {
+//                 letter: null,
+//                 status: "idle"
+//             },
+//             {
+//                 letter: null,
+//                 status: 'idle'
+//             },
+//             {
+//                 letter: null,
+//                 status: 'idle'
+//             },
+//         ]
+//     },
+// };

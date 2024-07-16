@@ -6,11 +6,13 @@ import { setDictionaryStructure } from "./utils/setDictionaryStructure";
 import { DictionaryType } from "./types/Types";
 import { getRandom } from "./utils/getRandom";
 
+export const NUMBER_OF_GUESSES = 6;
+export const WORD_LENGTH = 5;
+
 function App() {
     const [solution, setSolution] = useState<string | null>(null);
     const [dictionary, setDictionary] = useState<DictionaryType | null>(null);
 
-    const NUMBER_OF_GUESSES = 6;
     let guessesRemaining = NUMBER_OF_GUESSES;
     let currentGuess = [];
     let nextLetter: string[] = [];

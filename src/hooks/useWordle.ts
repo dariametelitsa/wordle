@@ -1,9 +1,15 @@
 import { DictionaryType, LetterType } from "../types/Types";
 import { useState } from "react";
 import { checkIsWordInDictionary } from "../utils/checkIsWordInDictionary";
+import { NUMBER_OF_GUESSES, WORD_LENGTH } from "../App";
 
-const useWordle = (solution: string, dictionary: DictionaryType) => {
-    const NUMBER_OF_GUESSES = 6;
+type useWordleType ={
+    solution: string,
+    dictionary: DictionaryType,
+    setMessage: (message: string | null) => void;
+}
+
+const useWordle = ({solution, dictionary, setMessage}: useWordleType) => {
     const [turn, setTurn] = useState<number>(0);
     const [currentGuess, setCurrentGuess] = useState<string>('');
     const [guesses, setGuesses] = useState<Array<Array<LetterType>>>([...Array(NUMBER_OF_GUESSES)]);
@@ -43,32 +49,43 @@ const useWordle = (solution: string, dictionary: DictionaryType) => {
             let newGuesses = [...prevGuesses];
             newGuesses[turn] = formattedGuess;
             return newGuesses
-            //return [...prevGuesses, formattedGuess]
             })
         setTurn(prevTurn => prevTurn + 1);
         setCurrentGuess('');
     }
 
+    const enterWord = () => {
+        if (turn >= NUMBER_OF_GUESSES) {
+            console.warn("You don't have try anymore");
+            setMessage("You don't have try anymore");
+            return
+        }
+        if (currentGuess.length !== WORD_LENGTH) {
+            console.warn("A word must be 5 chars long");
+            setMessage("A word must be 5 chars long");
+            return;
+        }
+        if (history.includes(currentGuess)) {
+            console.warn("You've already tried that word");
+            setMessage("You've already tried that word");
+            return;
+        }
+        if (!checkIsWordInDictionary(currentGuess, dictionary)) {
+            console.warn("There's not such word");
+            setMessage("There's not such word");
+            return;
+        }
+        const formatted = formatGuess(currentGuess);
+        addNewGuess(currentGuess, formatted);
+    }
+
+    const handleOnClick = () => {
+        enterWord()
+    }
+
     const handleKeyUp = (e: KeyboardEvent) => {
         if (e.key === "Enter") {
-            if (turn > 6) {
-                console.warn("You don't have try anymore")
-                return
-            }
-            if (currentGuess.length !== 5) {
-                console.warn("A word must be 5 chars long")
-                return;
-            }
-            if (history.includes(currentGuess)) {
-                console.warn("You've already tried that word")
-                return;
-            }
-            if (!checkIsWordInDictionary(currentGuess, dictionary)) {
-                console.warn("There's not such word")
-                return;
-            }
-            const formatted = formatGuess(currentGuess);
-            addNewGuess(currentGuess, formatted);
+            enterWord();
         }
         if (e.key === 'Backspace') {
             if (currentGuess.length > 0) {
@@ -77,7 +94,7 @@ const useWordle = (solution: string, dictionary: DictionaryType) => {
             return
         }
         if (/^[A-Za-z]$/.test(e.key)) {
-            if (currentGuess.length < 5) {
+            if (currentGuess.length < WORD_LENGTH) {
                 setCurrentGuess(prevState => prevState + e.key)
             }
         }
@@ -90,6 +107,7 @@ const useWordle = (solution: string, dictionary: DictionaryType) => {
         guesses,
         isCorrect,
         handleKeyUp,
+        handleOnClick,
     }
 }
 
