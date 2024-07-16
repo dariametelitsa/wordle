@@ -43,7 +43,7 @@ const useWordle = ({solution, dictionary, setMessage}: useWordleType) => {
 
     const addNewGuess = (currentGuess: string, formattedGuess: Array<LetterType>) => {
         if(currentGuess === solution) {
-            setIsCorrect(true)
+            setIsCorrect(true);
         }
         setHistory(prevHistory => [...prevHistory, currentGuess]);
         setGuesses(prevGuesses => {

@@ -7,6 +7,7 @@ import { Button } from "../button/Button";
 import { Grid } from "../grid/Grid";
 import { InfoMessage } from "../infoMessage/InfoMessage";
 import { Keypad } from "../keypad/Keypad";
+import { NUMBER_OF_GUESSES } from "../../App";
 
 type FieldProps = {
     solution: string
@@ -17,15 +18,18 @@ export const Field = ({solution, dictionary}: FieldProps) => {
     const [message, setMessage] = useState<null | string>(null);
     const {currentGuess, handleKeyUp, guesses, isCorrect, turn, handleOnClick, usedKeys} = useWordle({solution, dictionary, setMessage});
 
-
     useEffect(() => {
         window.addEventListener('keyup', handleKeyUp);
+        if(isCorrect) {
+            console.log('congr')
+            window.removeEventListener('keyup', handleKeyUp);
+        }
+        if(turn >= NUMBER_OF_GUESSES) {
+            console.log('fail')
+            window.removeEventListener('keyup', handleKeyUp);
+        }
         return () => window.removeEventListener('keyup', handleKeyUp);
-    }, [handleKeyUp]);
-
-    useEffect(() => {
-        console.log(guesses, turn, isCorrect)
-    }, [guesses, turn, isCorrect]);
+    }, [handleKeyUp, isCorrect, turn]);
 
     return (
         <div>
