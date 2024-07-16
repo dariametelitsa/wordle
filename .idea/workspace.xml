@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added addNewGuess and formatGuess body function">
-      <change afterPath="$PROJECT_DIR$/src/components/grid/Grid.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/infoMessage/InfoMessage.tsx" afterDir="false" />
+    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added keyboard">
+      <change afterPath="$PROJECT_DIR$/src/components/keypad/Keypad.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/wordsAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/wordsAPI.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/field/Field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/field/Field.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/letter/Letter.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letter/Letter.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/letter/Letter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letter/Letter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/word/Word.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/word/Word.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/word/Word.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/word/Word.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/useWordle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useWordle.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/Types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Types.ts" afterDir="false" />
@@ -28,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -135,7 +132,7 @@
       <workItem from="1715521025549" duration="123000" />
       <workItem from="1720690698401" duration="10414000" />
       <workItem from="1720786954891" duration="9300000" />
-      <workItem from="1721118541687" duration="9894000" />
+      <workItem from="1721118541687" duration="19120000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <option name="closed" value="true" />
@@ -225,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720799971369</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added logic and bounded it with UI">
+      <option name="closed" value="true" />
+      <created>1721132331196</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1721132331196</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +248,7 @@
     <MESSAGE value="added skeleton logic" />
     <MESSAGE value="added word adding logic" />
     <MESSAGE value="added addNewGuess and formatGuess body function" />
-    <option name="LAST_COMMIT_MESSAGE" value="added addNewGuess and formatGuess body function" />
+    <MESSAGE value="added logic and bounded it with UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="added logic and bounded it with UI" />
   </component>
 </project>

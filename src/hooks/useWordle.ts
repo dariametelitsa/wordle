@@ -1,4 +1,4 @@
-import { DictionaryType, LetterType } from "../types/Types";
+import { DictionaryType, LetterStatus, LetterType } from "../types/Types";
 import { useState } from "react";
 import { checkIsWordInDictionary } from "../utils/checkIsWordInDictionary";
 import { NUMBER_OF_GUESSES, WORD_LENGTH } from "../App";
@@ -15,6 +15,7 @@ const useWordle = ({solution, dictionary, setMessage}: useWordleType) => {
     const [guesses, setGuesses] = useState<Array<Array<LetterType>>>([...Array(NUMBER_OF_GUESSES)]);
     const [history, setHistory] = useState<Array<string>>([]);
     const [isCorrect, setIsCorrect] = useState(false);
+    const [usedKeys, setUsedKeys] = useState<{[key: string]: LetterStatus}>({});
 
     const formatGuess = (wordAttempt: string): Array<LetterType> => {
         let solutionArray: Array<string | null> = solution.split('');
@@ -51,6 +52,26 @@ const useWordle = ({solution, dictionary, setMessage}: useWordleType) => {
             return newGuesses
             })
         setTurn(prevTurn => prevTurn + 1);
+
+        setUsedKeys((prev) => {
+            let newKeys = {...prev};
+            formattedGuess.forEach((l) => {
+                const currentStatus = newKeys[l.letter];
+                if(l.status === 'rightPosition') {
+                    newKeys[l.letter] = 'rightPosition';
+                    return
+                }
+                if(l.status === 'wrongPosition' && currentStatus !== 'rightPosition') {
+                    newKeys[l.letter] = 'wrongPosition';
+                    return
+                }
+                if (l.status === 'wrongLetter' && currentStatus !== 'rightPosition' && currentStatus !== 'wrongPosition') {
+                    newKeys[l.letter] = 'wrongLetter';
+                    return
+                }
+            })
+            return newKeys;
+        });
         setCurrentGuess('');
     }
 
@@ -108,6 +129,7 @@ const useWordle = ({solution, dictionary, setMessage}: useWordleType) => {
         isCorrect,
         handleKeyUp,
         handleOnClick,
+        usedKeys,
     }
 }
 

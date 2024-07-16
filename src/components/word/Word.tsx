@@ -20,7 +20,7 @@ export const Word = ({guess, tip}: WordProps) => {
             return (
                 <div className={'flex justify-center items-center gap-2 relative m-2'}>
                     {currentGuess.map((l, ind) => {
-                        return <Letter key={ind} letter={l} state={'active'}/>
+                        return <Letter key={ind} letter={l} state={'idle'}/>
                     })}
                     {emptyLetters}
                 </div>
@@ -34,6 +34,7 @@ export const Word = ({guess, tip}: WordProps) => {
                         return (<Letter key={ind}
                                         letter={l.letter}
                                         state={l.status}
+                                        index={ind}
                         ></Letter>)
                     })
                 }

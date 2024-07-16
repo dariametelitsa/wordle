@@ -14,8 +14,12 @@ export type DictionaryType = {
 }
 
 export type LetterType = {
-    letter: string | null
+    letter: string
     status: LetterStatus
 }
 
 export type messageType = 'error' | 'info' | 'congratulation'
+
+export type AlphabetType = {
+    key: string
+}

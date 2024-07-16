@@ -6,6 +6,7 @@ import { DictionaryType } from "../../types/Types";
 import { Button } from "../button/Button";
 import { Grid } from "../grid/Grid";
 import { InfoMessage } from "../infoMessage/InfoMessage";
+import { Keypad } from "../keypad/Keypad";
 
 type FieldProps = {
     solution: string
@@ -14,8 +15,7 @@ type FieldProps = {
 
 export const Field = ({solution, dictionary}: FieldProps) => {
     const [message, setMessage] = useState<null | string>(null);
-    const {currentGuess, handleKeyUp, guesses, isCorrect, turn, handleOnClick} = useWordle({solution, dictionary, setMessage});
-
+    const {currentGuess, handleKeyUp, guesses, isCorrect, turn, handleOnClick, usedKeys} = useWordle({solution, dictionary, setMessage});
 
 
     useEffect(() => {
@@ -34,6 +34,7 @@ export const Field = ({solution, dictionary}: FieldProps) => {
             <div className="flex justify-center items-center w-full flex-col gap-2 mt-8">
                 <Grid currentGuess={currentGuess} guesses={guesses} turn={turn}/>
                 <Button callBack={handleOnClick}>Enter the word</Button>
+                <Keypad usedKeys={usedKeys}/>
             </div>
         </div>
     )
