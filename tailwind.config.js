@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors'); //bonus colors
+const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin');
 
 let color;
 module.exports = {
@@ -53,6 +54,16 @@ module.exports = {
   },
   plugins: [
     require("tailwindcss-animation-delay"),
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+          {
+            'animate-delay': (value) => ({
+              animationDelay: value,
+            }),
+          },
+          { values: theme('transitionDelay') }
+      )
+    }),
   ],
 }
 

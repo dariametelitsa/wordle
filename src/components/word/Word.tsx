@@ -11,8 +11,8 @@ type WordProps = {
 };
 
 export const Word = ({guess, tip}: WordProps) => {
-    if (guess) {
 
+    if (guess) {
         if (typeof guess === 'string') {
             const currentGuess = guess.split('');
             const emptyLetters = Array.from({length: WORD_LENGTH - currentGuess.length}, (_, ind) => (<Letter key={WORD_LENGTH + ind} letter={null} state={'active'}/>))
