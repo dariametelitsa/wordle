@@ -17,9 +17,6 @@ export const Letter = ({letter, state, index}: LetterProps) => {
             '--bg-color-end': state === 'wrongLetter' ? 'rgb(242 243 245)' : state === 'rightPosition' ? 'rgb(52 211 153)' : state === 'wrongPosition' ? 'rgb(252 211 77)' : 'rgb(212 215 220)',
         }
     }
-    if (index ===0) {
-        console.log(delay, style)
-    }
 
     const letterStyle = state === 'wrongLetter' ? `animate-flip` : state === 'rightPosition' ? `animate-flip` : state === 'wrongPosition' ? `animate-flip` : state === 'active' ? 'bg-gray-400 shadow-inner border-2 border-white' : 'bg-gray-400 shadow-inner animate-bounce';
 

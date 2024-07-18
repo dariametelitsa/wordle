@@ -13,15 +13,20 @@ import { Modal } from "../modal/Modal";
 type FieldProps = {
     solution: string
     dictionary: DictionaryType
+    restartGame: () => void
 };
 
-export const Field = ({solution, dictionary}: FieldProps) => {
+export const Field = ({solution, dictionary, restartGame}: FieldProps) => {
     const [message, setMessage] = useState<null | string>(null);
-    const {currentGuess, handleKeyUp, guesses, isCorrect, turn, handleOnClick, usedKeys} = useWordle({solution, dictionary, setMessage});
+    const {currentGuess, handleKeyUp, guesses, isCorrect, turn, handleOnClick, usedKeys, cleanGameData} = useWordle({solution, dictionary, setMessage});
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         window.addEventListener('keyup', handleKeyUp);
+        return () => window.removeEventListener('keyup', handleKeyUp);
+    }, [handleKeyUp]);
+
+    useEffect(() => {
         if(isCorrect) {
             setTimeout(()=> setShowModal(true), 3000);
             window.removeEventListener('keyup', handleKeyUp);
@@ -30,8 +35,13 @@ export const Field = ({solution, dictionary}: FieldProps) => {
             setTimeout(()=> setShowModal(true), 3000);
             window.removeEventListener('keyup', handleKeyUp);
         }
-        return () => window.removeEventListener('keyup', handleKeyUp);
-    }, [handleKeyUp, isCorrect, turn]);
+    }, [isCorrect, turn]);
+
+    const restartGameHandler = () => {
+        setShowModal(false);
+        cleanGameData();
+        restartGame();
+    }
 
     return (
         <div>
@@ -41,7 +51,7 @@ export const Field = ({solution, dictionary}: FieldProps) => {
                 <Grid currentGuess={currentGuess} guesses={guesses} turn={turn}/>
                 <Button callBack={handleOnClick}>Enter the word</Button>
                 <Keypad usedKeys={usedKeys}/>
-                {showModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution}/>}
+                {showModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution} restartGame={restartGameHandler}/>}
             </div>
         </div>
     )

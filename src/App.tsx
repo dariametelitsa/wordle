@@ -18,7 +18,7 @@ function App() {
     let nextLetter: string[] = [];
     //let searchWord = WORDS[getRandom(0, WORDS.length - 1)];
 
-    useEffect(() => {
+    const getNewWord = () => {
         wordsAPI.getDictionary()
             .then(res => {
                 setDictionary(setDictionaryStructure(res));
@@ -28,33 +28,21 @@ function App() {
             .catch(e => {
                 console.log(e.message)
             })
+    }
+
+    useEffect(() => {
+        getNewWord();
     }, []);
 
-
-    // useEffect(() => {
-    //     const onKeyDown = (event: KeyboardEvent) => {
-    //         let key = event.key;
-    //         let found = key.match(/[a-zA-Z]/gi);
-    //
-    //         console.log('Key pressed', event.key);
-    //         if (key === 'Backspace' && nextLetter.length !== 0) {
-    //             nextLetter.pop();
-    //             return;
-    //         }
-    //
-    //     };
-    //     document.addEventListener('keydown', onKeyDown);
-    //
-    //     return () => {
-    //         document.removeEventListener('keydown', onKeyDown);
-    //     };
-    // }, []);
+    const restartGame = () => {
+        getNewWord();
+    }
 
     return (
         <div className="App bg-gray-200 h-screen flex justify-center items-center w-full flex-col">
             <h1 className="text-4xl font-bold text-cyan-700">Let's play "Wordle"</h1>
             {solution && <p>{solution}</p>}
-            {solution && dictionary && <Field solution={solution} dictionary={dictionary}/>}
+            {solution && dictionary && <Field solution={solution} dictionary={dictionary} restartGame={restartGame}/>}
         </div>
     );
 }

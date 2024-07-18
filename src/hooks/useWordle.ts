@@ -17,9 +17,18 @@ const useWordle = ({solution, dictionary, setMessage}: useWordleType) => {
     const [isCorrect, setIsCorrect] = useState(false);
     const [usedKeys, setUsedKeys] = useState<{[key: string]: LetterStatus}>({});
 
+    const cleanGameData = () => {
+        setIsCorrect(false);
+        setTurn(0);
+        setCurrentGuess('');
+        setGuesses([...Array(NUMBER_OF_GUESSES)]);
+        setHistory([]);
+        setUsedKeys({});
+    }
+
     const formatGuess = (wordAttempt: string): Array<LetterType> => {
         let solutionArray: Array<string | null> = solution.split('');
-        let formattedGuess = currentGuess.toLowerCase()
+        let formattedGuess = wordAttempt.toLowerCase()
             .split('')
             .map((w) => {
                 return ({letter: w, status: "wrongLetter"} as LetterType)
@@ -130,6 +139,7 @@ const useWordle = ({solution, dictionary, setMessage}: useWordleType) => {
         handleKeyUp,
         handleOnClick,
         usedKeys,
+        cleanGameData,
     }
 }
 
