@@ -35,7 +35,7 @@ export const Field = ({solution, dictionary, restartGame}: FieldProps) => {
             setTimeout(()=> setShowModal(true), 3000);
             window.removeEventListener('keyup', handleKeyUp);
         }
-    }, [isCorrect, turn]);
+    }, [isCorrect, turn, handleKeyUp]);
 
     const restartGameHandler = () => {
         setShowModal(false);

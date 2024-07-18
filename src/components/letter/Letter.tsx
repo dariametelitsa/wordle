@@ -22,7 +22,7 @@ export const Letter = ({letter, state, index}: LetterProps) => {
 
 
     return (
-        <div className={`flex justify-center items-center size-16 p-3 dark:bg-gray-800 rounded-2xl font-bold text-white text-3xl
+        <div className={`bg-gray-400 flex justify-center items-center size-16 p-3 dark:bg-gray-800 rounded-2xl font-bold text-white text-3xl
         ${letterStyle}`} style={style}>
             {letter ? letter.toUpperCase() : ''}
         </div>
