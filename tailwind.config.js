@@ -1,8 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors');
-const plugin = require('tailwindcss/plugin');
 
-let color;
 module.exports = {
   mode: 'jit',
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './.storybook/**/*.stories.{js,jsx,ts,tsx}'],
