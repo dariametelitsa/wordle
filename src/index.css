@@ -26,3 +26,8 @@
     border: 6px solid transparent;
     border-right: 6px solid rgb(54, 57, 63);
 }
+
+:root {
+    --bg-color-start: rgb(212 215 220); /* Default or starting color */
+    --bg-color-end: rgb(212 215 220); /* The color after flip */
+}

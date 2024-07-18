@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added styles for modal">
+    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added try to fix animation duration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/field/Field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/field/Field.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/letter/Letter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letter/Letter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/word/Word.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/word/Word.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +130,8 @@
       <workItem from="1721118541687" duration="19120000" />
       <workItem from="1721149650412" duration="1550000" />
       <workItem from="1721203763926" duration="201000" />
-      <workItem from="1721229673604" duration="3063000" />
+      <workItem from="1721229673604" duration="3090000" />
+      <workItem from="1721291712535" duration="3130000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <option name="closed" value="true" />
@@ -260,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721151198978</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added try to fix animation duration">
+      <option name="closed" value="true" />
+      <created>1721232785211</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1721232785211</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +292,7 @@
     <MESSAGE value="added ending game logic" />
     <MESSAGE value="added modal" />
     <MESSAGE value="added styles for modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="added styles for modal" />
+    <MESSAGE value="added try to fix animation duration" />
+    <option name="LAST_COMMIT_MESSAGE" value="added try to fix animation duration" />
   </component>
 </project>

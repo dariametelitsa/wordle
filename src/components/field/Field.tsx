@@ -23,11 +23,11 @@ export const Field = ({solution, dictionary}: FieldProps) => {
     useEffect(() => {
         window.addEventListener('keyup', handleKeyUp);
         if(isCorrect) {
-            setTimeout(()=> setShowModal(true), 2000);
+            setTimeout(()=> setShowModal(true), 3000);
             window.removeEventListener('keyup', handleKeyUp);
         }
         if(turn >= NUMBER_OF_GUESSES) {
-            setTimeout(()=> setShowModal(true), 2000);
+            setTimeout(()=> setShowModal(true), 3000);
             window.removeEventListener('keyup', handleKeyUp);
         }
         return () => window.removeEventListener('keyup', handleKeyUp);

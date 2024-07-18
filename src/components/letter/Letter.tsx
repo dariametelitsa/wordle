@@ -2,8 +2,6 @@
 import * as React from 'react';
 import { LetterStatus } from "../../types/Types";
 
-// export type LetterState = 'empty' | 'wrong' | 'onPlace' | 'outOfPlace' | 'active';
-
 export type LetterProps = {
     letter?: string | null
     state: LetterStatus
@@ -11,17 +9,24 @@ export type LetterProps = {
 };
 export const Letter = ({letter, state, index}: LetterProps) => {
     let delay = 0;
-    if(index) {
-        delay = index * 1000;
+    let style = {};
+    if (index || index === 0) {
+        delay = index * 500;
+        style = {
+            animationDelay: `${delay}ms`,
+            '--bg-color-end': state === 'wrongLetter' ? 'rgb(242 243 245)' : state === 'rightPosition' ? 'rgb(52 211 153)' : state === 'wrongPosition' ? 'rgb(252 211 77)' : 'rgb(212 215 220)',
+        }
     }
-    console.log(delay)
-    //animation-delay-1000
-    // const letterStyle = state === 'wrongLetter' ? `bg-gray-300 animate-flip animate-delay-${delay}` : state === 'rightPosition' ? `bg-emerald-400 animate-flip animate-delay-${delay}` : state === 'wrongPosition' ? `bg-amber-300 animate-flip animate-delay-${delay}`: state === 'active' ? 'bg-gray-400 shadow-inner border-2 border-white' : 'bg-gray-400 shadow-inner animate-bounce';
-    const letterStyle = state === 'wrongLetter' ? `bg-gray-300 animate-flip animation-delay-${delay}` : state === 'rightPosition' ? `bg-emerald-400 animate-flip animation-delay-${delay}` : state === 'wrongPosition' ? `bg-amber-300 animate-flip animation-delay-${delay}`: state === 'active' ? 'bg-gray-400 shadow-inner border-2 border-white' : 'bg-gray-400 shadow-inner animate-bounce';
+    if (index ===0) {
+        console.log(delay, style)
+    }
+
+    const letterStyle = state === 'wrongLetter' ? `animate-flip` : state === 'rightPosition' ? `animate-flip` : state === 'wrongPosition' ? `animate-flip` : state === 'active' ? 'bg-gray-400 shadow-inner border-2 border-white' : 'bg-gray-400 shadow-inner animate-bounce';
+
 
     return (
         <div className={`flex justify-center items-center size-16 p-3 dark:bg-gray-800 rounded-2xl font-bold text-white text-3xl
-        ${letterStyle}`}>
+        ${letterStyle}`} style={style}>
             {letter ? letter.toUpperCase() : ''}
         </div>
     );
