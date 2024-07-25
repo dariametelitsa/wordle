@@ -13,11 +13,6 @@ function App() {
     const [solution, setSolution] = useState<string | null>(null);
     const [dictionary, setDictionary] = useState<DictionaryType | null>(null);
 
-    let guessesRemaining = NUMBER_OF_GUESSES;
-    let currentGuess = [];
-    let nextLetter: string[] = [];
-    //let searchWord = WORDS[getRandom(0, WORDS.length - 1)];
-
     const getNewWord = () => {
         wordsAPI.getDictionary()
             .then(res => {

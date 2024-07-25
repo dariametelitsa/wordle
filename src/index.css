@@ -2,14 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/*custom class*/
-/* @apply; - combine utilities into a single class*/
 @layer components {
-    /*.sidebar-icon {*/
-    /*    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto bg-gray-800 text-green-500 hover:bg-green-600 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer hover:text-white;*/
-    /*}*/
-
     .tip {
         @apply absolute w-auto p-2 rounded-md bg-gray-700 shadow-md text-white text-xs font-bold transition-all duration-100 origin-left flex gap-1 max-w-custom right-0 translate-x-[calc(100%+12px)];
     }

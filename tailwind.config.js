@@ -35,8 +35,8 @@ module.exports = {
         flip: {
           '0%': { transform: 'rotateX(0)', backgroundColor: 'var(--bg-color-start)' },
           '45%': { transform: 'rotateX(90deg)', backgroundColor: 'var(--bg-color-start)' },
-          '55%': { transform: 'rotateX(90deg)', backgroundColor: 'var(--bg-color-end)' },
-          '100%': { transform: 'rotateX(0)', backgroundColor: 'var(--bg-color-end)' },
+          '55%': { transform: 'rotateX(90deg)', background: 'var(--bg-color-end)' },
+          '100%': { transform: 'rotateX(0)', background: 'var(--bg-color-end)' },
         },
         bounce: {
           '0%': { transform: 'scale(1)'},
