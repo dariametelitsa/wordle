@@ -18,6 +18,9 @@ export const Keypad = ({usedKeys, onDigitalLetterPressed}: Props) => {
             })
     }, []);
 
+    const dragStartHandler = (e: React.DragEvent<HTMLDivElement>, letter: string) => {
+        console.log('drag',letter)
+    }
 
     return (
         <div className={'flex flex-wrap max-w-xl justify-center gap-1'}>
@@ -25,7 +28,12 @@ export const Keypad = ({usedKeys, onDigitalLetterPressed}: Props) => {
 
                 const letterColor = usedKeys[l.key] === 'wrongLetter' ? `bg-gray-200` : usedKeys[l.key] === 'rightPosition' ? `bg-emerald-400` : usedKeys[l.key] === 'wrongPosition' ? `bg-amber-300`: usedKeys[l.key] === 'active' ? 'bg-gray-400 shadow-inner border-2 border-white' : 'bg-gray-400';
 
-                return (<div onClick={() => onDigitalLetterPressed(l.key)} className={`flex justify-center items-center w-12 h-16 border-2 rounded-2xl border-gray-100 transition ease-in-out delay-300 select-none ${letterColor}`} key={l.key}>{l.key}</div>)
+                return (
+                    <div draggable={true}
+                         onDragStart={(e) => dragStartHandler(e, l.key)}
+                         onClick={() => onDigitalLetterPressed(l.key)}
+                         className={`flex justify-center items-center w-12 h-16 border-2 rounded-2xl border-gray-100 transition ease-in-out delay-300 select-none cursor-pointer ${letterColor}`} key={l.key}>{l.key}
+                    </div>)
             })}
         </div>
     );

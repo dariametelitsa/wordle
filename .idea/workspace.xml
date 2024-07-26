@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added function for getting letter">
+    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added logic for type letters from digital keyboard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/field/Field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/field/Field.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/keypad/Keypad.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/keypad/Keypad.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useWordle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useWordle.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/letter/Letter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letter/Letter.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +131,7 @@
       <workItem from="1721229673604" duration="3090000" />
       <workItem from="1721291712535" duration="7721000" />
       <workItem from="1721921364065" duration="723000" />
-      <workItem from="1721981596360" duration="956000" />
+      <workItem from="1721981596360" duration="3644000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <option name="closed" value="true" />
@@ -318,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721922082308</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="added logic for type letters from digital keyboard">
+      <option name="closed" value="true" />
+      <created>1721983974913</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1721983974913</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,6 +355,7 @@
     <MESSAGE value="fixed letter bg" />
     <MESSAGE value="deleted unused variables and imports" />
     <MESSAGE value="added function for getting letter" />
-    <option name="LAST_COMMIT_MESSAGE" value="added function for getting letter" />
+    <MESSAGE value="added logic for type letters from digital keyboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="added logic for type letters from digital keyboard" />
   </component>
 </project>
