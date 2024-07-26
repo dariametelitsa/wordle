@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="deleted unused variables and imports">
+    <list default="true" id="bd6b16e7-60d7-4065-8d96-efb10555dc43" name="Changes" comment="added function for getting letter">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/field/Field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/field/Field.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/keypad/Keypad.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/keypad/Keypad.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useWordle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useWordle.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +131,8 @@
       <workItem from="1721203763926" duration="201000" />
       <workItem from="1721229673604" duration="3090000" />
       <workItem from="1721291712535" duration="7721000" />
-      <workItem from="1721921364065" duration="693000" />
+      <workItem from="1721921364065" duration="723000" />
+      <workItem from="1721981596360" duration="956000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <option name="closed" value="true" />
@@ -307,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721921672478</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added function for getting letter">
+      <option name="closed" value="true" />
+      <created>1721922082308</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1721922082308</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,6 +347,7 @@
     <MESSAGE value="added restart button" />
     <MESSAGE value="fixed letter bg" />
     <MESSAGE value="deleted unused variables and imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted unused variables and imports" />
+    <MESSAGE value="added function for getting letter" />
+    <option name="LAST_COMMIT_MESSAGE" value="added function for getting letter" />
   </component>
 </project>

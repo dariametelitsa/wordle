@@ -113,19 +113,22 @@ const useWordle = ({solution, dictionary, setMessage}: useWordleType) => {
         enterWord()
     }
 
-    const handleKeyUp = (e: KeyboardEvent) => {
-        if (e.key === "Enter") {
-            enterWord();
-        }
-        if (e.key === 'Backspace') {
-            if (currentGuess.length > 0) {
-                setCurrentGuess(prevState => prevState.slice(0, -1));
+    const handleKeyUp = (e: KeyboardEvent | string) => {
+        if(e instanceof KeyboardEvent) {
+            if (e.key === "Enter") {
+                enterWord();
             }
-            return
+            if (e.key === 'Backspace') {
+                if (currentGuess.length > 0) {
+                    setCurrentGuess(prevState => prevState.slice(0, -1));
+                }
+                return
+            }
         }
-        if (/^[A-Za-z]$/.test(e.key)) {
+        const char = e instanceof KeyboardEvent ? e.key : e;
+        if (/^[A-Za-z]$/.test(char)) {
             if (currentGuess.length < WORD_LENGTH) {
-                setCurrentGuess(prevState => prevState + e.key)
+                setCurrentGuess(prevState => prevState + char);
             }
         }
 

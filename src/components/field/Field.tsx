@@ -49,7 +49,7 @@ export const Field = ({solution, dictionary, restartGame}: FieldProps) => {
             <div className="flex justify-center items-center w-full flex-col gap-2 mt-8">
                 <Grid currentGuess={currentGuess} guesses={guesses} turn={turn}/>
                 <Button callBack={handleOnClick}>Enter the word</Button>
-                <Keypad usedKeys={usedKeys} onLetterPressed={()=>{}}/>
+                <Keypad usedKeys={usedKeys} onDigitalLetterPressed={handleKeyUp}/>
                 {showModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution} restartGame={restartGameHandler}/>}
             </div>
         </div>
